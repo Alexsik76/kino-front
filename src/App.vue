@@ -3,10 +3,8 @@
 </script>
 
 <template>
-   <nav>
- <RouterLink to="/">Домашня сторінка</RouterLink>
- <RouterLink to="/films">Фільми</RouterLink>
- </nav>
+  <Navbar />
+
  <RouterView />
 </template>
 
