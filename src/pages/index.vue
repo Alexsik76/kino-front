@@ -30,17 +30,7 @@ import MovieCard from '../components/MovieCard.vue';
             </div>
             <div class="movie-cards">
                 <MovieCard :movie-id="1"/>
-                <div class="movie-card">
-                    <a href="movie.html">
-                        <img src="/src/assets/img/movie2.jpg" alt="Movie 2">
-                    </a>
-                    <h3>МУФАСА</h3>
-                    <p>Сеанси: <span>2D (зал 2)</span></p>
-                    <div class="sessions">
-                        <button class="session">14:30</button>
-                        <button class="session">18:30</button>
-                    </div>
-                </div>
+                <MovieCard :movie-id="3"/>
             </div>
         </section>
     </main>

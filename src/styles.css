@@ -688,7 +688,9 @@ body {
     align-items: center;
     margin-bottom: 16px;
 }
-
+.seat-row{
+    display:flex;
+}
 /* Місця в залі */
 .seat {
     width: 40px;
