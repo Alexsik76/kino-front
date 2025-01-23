@@ -6,7 +6,7 @@
        <Error404/>
     </div>
     <div v-if="data" class="movie-card">
-        <a href="/poster1">
+        <a :href="link">
             <img :src="data.poster" alt="Movie 1">
         </a>
         <h3>{{ data.title }}</h3>
@@ -21,9 +21,12 @@
 import { useFetch } from '@vueuse/core';
 import Loader from './Loader.vue';
 import Error404 from './Error404.vue';
+import {ref} from 'vue'
+const link = ref(null) 
 const props = defineProps({
   movieId: Number
 })
 const base_url = import.meta.env.VITE_API_URL
 const { isFetching, error, data} = useFetch(`${base_url}movies/${props.movieId}/`, { refetch: true }).json()
+link.value = `/poster${props.movieId}`
 </script>

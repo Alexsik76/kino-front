@@ -11,7 +11,10 @@ import MovieCard from '../components/MovieCard.vue';
                 <div class="info-text">
                     <h2>НАЙКРАЩИЙ КІНОТЕАТР ТВОГО МІСТА</h2>
                     <p class="info-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio vestibulum, bibendum nunc sed, posuere eros. Nullam sodales ligula sed molestie varius. Donec non convallis libero, vitae vestibulum diam.
+                       Відкрий для себе унікальний кінодосвід у нашому кінотеатрі в Києві! Сучасні кінозали, найгучніші прем'єри, зручне
+                        онлайн-бронювання квитків та вигідні акції. Насолоджуйся переглядом у форматах 2D, 3D, IMAX, а також великим вибором
+                        напоїв і закусок. Зручне розташування та першокласний сервіс зроблять твій візит незабутнім. Обирай фільм та бронюй
+                        квитки вже зараз!
                     </p>
                 </div>
             </div>
@@ -27,17 +30,7 @@ import MovieCard from '../components/MovieCard.vue';
             </div>
             <div class="movie-cards">
                 <MovieCard :movie-id="1"/>
-                <div class="movie-card">
-                    <a href="movie.html">
-                        <img src="/src/assets/img/movie2.jpg" alt="Movie 2">
-                    </a>
-                    <h3>МУФАСА</h3>
-                    <p>Сеанси: <span>2D (зал 2)</span></p>
-                    <div class="sessions">
-                        <button class="session">14:30</button>
-                        <button class="session">18:30</button>
-                    </div>
-                </div>
+                <MovieCard :movie-id="3"/>
             </div>
         </section>
     </main>

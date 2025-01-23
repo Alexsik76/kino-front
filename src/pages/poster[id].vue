@@ -18,13 +18,13 @@
         </div>
     </div>
     </div>
+    <Hall/>
 </template>
 <script setup>
-import { ref, watch } from 'vue'
 import { useFetch } from '@vueuse/core';
 import { useRoute } from 'vue-router' 
+import Hall from './../components/Hall.vue'
 const route = useRoute()
-const movieData = ref()
 const base_url = import.meta.env.VITE_API_URL
 
 const { isFetching, error, data } = useFetch(`${base_url}movies/${route.params.id}/`, { refetch: true }).json()
