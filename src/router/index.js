@@ -1,15 +1,12 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-import HomeView from './../views/HomeView.vue'
-import FilmsView from './../views/FilmsView.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import { routes, handleHotUpdate } from 'vue-router/auto-routes'
 
-
-const routes = [
-    { path: '/', component: HomeView },
-    { path: '/films', component: FilmsView },
-  ]
-  
+ 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes,
 })
+if (import.meta.hot) { 
+    handleHotUpdate(router) 
+  } 
 export default router

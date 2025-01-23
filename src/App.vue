@@ -1,11 +1,17 @@
 <script setup>
-
 </script>
 
 <template>
-  <Navbar />
-
- <RouterView />
+  <main>
+    <Navbar/>
+    <RouterView />
+    <Footer/>
+  </main>
 </template>
 
-
+<style scoped>
+a {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+</style>
