@@ -1,5 +1,6 @@
 <template>
-    <div v-if="isFetching" class="movie-card" >
+    <div>
+      <div v-if="isFetching" class="movie-card" >
        <Loader/>
     </div>
     <div v-else-if="error" class="movie-card" >
@@ -16,14 +17,16 @@
             <button class="session">16:30</button>
         </div>
     </div>
+    </div>
 </template>
 <script setup>
+import { ref, watch } from 'vue'
 import { useFetch } from '@vueuse/core';
-import Loader from './Loader.vue';
-import Error404 from './Error404.vue';
-const props = defineProps({
-  movieId: Number
-})
+import { useRoute } from 'vue-router' 
+const route = useRoute()
+const movieData = ref()
 const base_url = import.meta.env.VITE_API_URL
-const { isFetching, error, data} = useFetch(`${base_url}movies/${props.movieId}/`, { refetch: true }).json()
+
+const { isFetching, error, data } = useFetch(`${base_url}movies/${route.params.id}/`, { refetch: true }).json()
+
 </script>

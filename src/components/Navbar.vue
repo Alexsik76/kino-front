@@ -20,7 +20,7 @@ import { ref } from 'vue'
         <a href="cart.html" class="nav-item">Корзина</a> -->
     </nav>
         <div class="burger-menu" data-menu-open>
-            <img src="./assets/icons/burger-menu.svg" alt="Menu">
+            <img src="/src/assets/icons/burger-menu.svg" alt="Menu">
         </div>
     </header>
 </template>

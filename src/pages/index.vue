@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import MovieCard from '../components/MovieCard.vue';
+
+</script>
+
 <template>
     <main>
         <section class="info">
@@ -21,17 +26,7 @@
                 <button class="tab">Післязавтра</button>
             </div>
             <div class="movie-cards">
-                <div class="movie-card">
-                    <a href="movie.html">
-                        <img src="/src/assets/img/movie1.jpg" alt="Movie 1">
-                    </a>
-                    <h3>31 ГРУДНЯ</h3>
-                    <p>Сеанси: <span>2D (зал 1)</span></p>
-                    <div class="sessions">
-                        <button class="session">14:30</button>
-                        <button class="session">16:30</button>
-                    </div>
-                </div>
+                <MovieCard :movie-id="1"/>
                 <div class="movie-card">
                     <a href="movie.html">
                         <img src="/src/assets/img/movie2.jpg" alt="Movie 2">

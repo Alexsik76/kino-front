@@ -1,6 +1,8 @@
 <template>
-    <h1>Poster</h1>
-    <p>
-    <strong>Current route path:</strong> {{ $route.fullPath }}
-  </p>
+    <div>
+      <h2>User </h2>
+    </div>
 </template>
+<script setup>
+
+</script>
